@@ -1,0 +1,132 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the app */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* To-Do App Header */
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+/* Input row for task entry */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0a9c11;
+}
+
+/* Add Task button styling */
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #0a9c11;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #068051;
+}
+
+/* Task list container */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Individual task items */
+ul li {
+    font-size: 17px;
+    padding: 12px 10px 12px 40px; /* Space for the checkbox */
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Checkbox icon for tasks (unchecked state) */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: url('unchecked.png') no-repeat center;
+    background-size: cover;
+    top: 50%;
+    left: 10px; /* Space for the checkbox */
+    transform: translateY(-50%);
+}
+
+/* Checked state styling for tasks */
+ul li.checked {
+    text-decoration: line-through;
+    color: #666;
+}
+
+ul li.checked::before {
+    background: url('checked.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Delete button for tasks */
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+ul li span:hover {
+    color: darkred;
+}
